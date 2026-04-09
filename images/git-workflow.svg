@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200" width="720" height="200" font-family="'Segoe UI', Arial, sans-serif">
+  <!-- Background -->
+  <rect width="720" height="200" fill="#f6f8fa" rx="12"/>
+
+  <!-- Working Directory box -->
+  <rect x="20" y="60" width="160" height="80" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="100" y="92" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e40af">作業ツリー</text>
+  <text x="100" y="112" text-anchor="middle" font-size="11" fill="#1e40af">(Working Tree)</text>
+
+  <!-- Staging Area box -->
+  <rect x="280" y="60" width="160" height="80" rx="10" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="360" y="92" text-anchor="middle" font-size="13" font-weight="bold" fill="#166534">ステージング</text>
+  <text x="360" y="112" text-anchor="middle" font-size="11" fill="#166534">(Index)</text>
+
+  <!-- Repository box -->
+  <rect x="540" y="60" width="160" height="80" rx="10" fill="#fef9c3" stroke="#eab308" stroke-width="2"/>
+  <text x="620" y="92" text-anchor="middle" font-size="13" font-weight="bold" fill="#713f12">リポジトリ</text>
+  <text x="620" y="112" text-anchor="middle" font-size="11" fill="#713f12">(Repository)</text>
+
+  <!-- Arrow: Working → Staging -->
+  <line x1="184" y1="100" x2="276" y2="100" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="230" y="88" text-anchor="middle" font-size="11" fill="#374151">git add</text>
+
+  <!-- Arrow: Staging → Repository -->
+  <line x1="444" y1="100" x2="536" y2="100" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="490" y="88" text-anchor="middle" font-size="11" fill="#374151">git commit</text>
+
+  <!-- Arrow: Repository → Working (restore) -->
+  <path d="M620 140 Q620 175 100 175 Q100 175 100 144" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-gray)"/>
+  <text x="360" y="188" text-anchor="middle" font-size="10" fill="#64748b">git restore / git reset</text>
+
+  <!-- Arrowhead marker -->
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-gray" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>
